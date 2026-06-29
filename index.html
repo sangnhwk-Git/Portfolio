@@ -147,39 +147,85 @@ h1.hero-name span{color:var(--red)}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
 .hero-bio{font-size:.95rem;color:var(--text-dim);max-width:480px;line-height:1.8}
 .hero-social{display:flex;gap:1rem;margin-top:.5rem}
-.social-btn{
-  width:44px;height:44px;border-radius:50%;
-  border:1px solid var(--border-red);display:flex;align-items:center;justify-content:center;
-  color:var(--text-dim);font-size:1.1rem;transition:var(--transition);
-  position:relative;overflow:hidden
+.social-btn {
+    width: 44px; height: 44px; border-radius: 50%;
+    border: 0.2rem solid var(--border-red); 
+    display: flex; align-items: center; justify-content: center;
+    color: var(--text-dim); font-size: 1.5rem; 
+    transition: 0.3s ease; 
+    position: relative;
+    cursor: pointer;
 }
 .social-btn::before{
   content:'';position:absolute;inset:0;background:var(--red-dim);
   transform:scale(0);border-radius:50%;transition:transform var(--transition)
 }
-.social-btn:hover{color:var(--red);border-color:var(--red)}
-.social-btn:hover::before{transform:scale(1)}
-.social-btn svg{position:relative;z-index:1}
-.hero-cta{display:flex;gap:1rem;flex-wrap:wrap;margin-top:.5rem}
-.btn-primary{
-  padding:.85rem 2.2rem;background:var(--red);color:#fff;font-weight:700;
-  font-size:.9rem;letter-spacing:.06em;text-transform:uppercase;
-  border:none;border-radius:4px;cursor:pointer;position:relative;overflow:hidden;
-  transition:var(--transition);display:inline-flex;align-items:center;gap:.5rem
+.social-btn:hover {
+    color: black;
+    transform: scale(1.3) translateY(-5px);
+    background-color: var(--red); 
+    box-shadow: 0 0 25px var(--red); 
+    border-color: var(--red);
+    z-index: 10;
+}
+.hero-cta { display: flex; gap: 1rem; margin-top: .5rem; }
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    padding: 0.7rem 1.8rem; 
+    background-color: black; 
+    border-radius: 4rem;
+    font-size: 1.1rem; 
+    color: var(--red);
+    letter-spacing: 0.15rem; 
+    font-weight: 600;
+    text-transform: uppercase;
+    border: 2px solid var(--red);
+    cursor: pointer;
+    transition: 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    box-sizing: border-box;
 }
 .btn-primary::before{
   content:'';position:absolute;inset:0;background:rgba(255,255,255,.15);
   transform:translateX(-100%);transition:transform .4s ease
 }
 .btn-primary:hover::before{transform:translateX(100%)}
-.btn-primary:hover{box-shadow:0 0 30px rgba(255,0,60,.5)}
-.btn-ghost{
-  padding:.85rem 2.2rem;background:transparent;color:var(--red);font-weight:700;
-  font-size:.9rem;letter-spacing:.06em;text-transform:uppercase;
-  border:1px solid var(--border-red);border-radius:4px;cursor:pointer;
-  transition:var(--transition);display:inline-flex;align-items:center;gap:.5rem
+.btn-primary:hover {
+    transform: scale(1.03);
+    background-color: var(--red); 
+    color: black; 
+    box-shadow: 0 0 25px var(--red);
 }
-.btn-ghost:hover{background:var(--red-dim);box-shadow:0 0 20px rgba(255,0,60,.2);border-color:var(--red)}
+.btn-ghost {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    padding: 0.7rem 1.8rem; 
+    background-color: transparent; 
+    border-radius: 4rem;
+    font-size: 1.1rem; 
+    color: var(--red);
+    letter-spacing: 0.15rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    border: 2px solid var(--red); 
+    cursor: pointer;
+    transition: 0.3s ease;
+    text-decoration: none;
+    box-sizing: border-box; 
+}
+.btn-ghost:hover {
+    transform: scale(1.03);
+    background-color: var(--red); 
+    color: black; 
+    box-shadow: 0 0 25px var(--red);
+}
 
 /* ── SCROLL INDICATOR ── */
 .scroll-indicator{
@@ -291,7 +337,7 @@ h2.section-title em{font-style:normal;color:var(--red)}
   inset: 0;
   background: radial-gradient(circle at 50% 0%, rgba(255, 0, 60, .06) 0%, transparent 70%);
   opacity: 0;
-  transition: opacity var(--transition); /* Added missing semicolon */
+  transition: opacity var(--transition);
   pointer-events: none;
 }
 .project-card:hover{
@@ -339,7 +385,7 @@ h3.project-title{font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:.25re
   padding: .5rem 1rem;
   border: 1px solid var(--border-red);
   border-radius: 4px;
-  transition: var(--transition); /* Added missing semicolon */
+  transition: var(--transition); 
   cursor: pointer;        
   position: relative;     
   z-index: 1;             
@@ -505,7 +551,7 @@ footer{
       </p>
       <div class="hero-social">
         <!-- GitHub -->
-        <a href="https://github.com/hoangluann794-glitch" target="_blank" class="social-btn" aria-label="GitHub">
+        <a href="https://github.com/sangnhwk-Git" target="_blank" class="social-btn" aria-label="GitHub">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.373 0 12c0 5.303 3.438 9.8 8.207 11.387.6.113.793-.258.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
         </a>
         <!-- Email -->
@@ -622,7 +668,7 @@ footer{
             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.373 0 12c0 5.303 3.438 9.8 8.207 11.387.6.113.793-.258.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
           </div>
           <div>
-            <strong><a href="https://github.com/hoangluann794-glitch" target="_blank" style="color:inherit">github.com/hoangluann794-glitch</a></strong>
+            <strong><a href="https://github.com/sangnhwk-Git" target="_blank" style="color:inherit">github.com/sangnhwk-Git</a></strong>
             <p>GitHub profile</p>
           </div>
         </div>
@@ -908,7 +954,7 @@ footer{
           </div>
           <div>
             <p>GitHub</p>
-            <a href="https://github.com/hoangluann794-glitch" target="_blank">hoangluann794-glitch</a>
+            <a href="https://github.com/sangnhwk-Git" target="_blank">sangnhwk-Git</a>
           </div>
         </div>
         <div class="contact-item">
